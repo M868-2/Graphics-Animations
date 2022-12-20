@@ -1,1 +1,11 @@
-/* CSS Style Sheet */
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+canvas {
+    border: 1px solid black;
+}
