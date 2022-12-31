@@ -24,3 +24,6 @@ ctx.fillText("I Found You :)", 300, 50);
 ctx.font = "30px Arial";
 ctx.strokeStyle = "rgb(0, 20, 40)";
 ctx.strokeText("Save me", 300, 100);
+
+// DRAW LINES 
+ctx.beginPath()
