@@ -1,10 +1,13 @@
 // DRAWING BASICS
 
-// SET UP THE CANVAS ADN GRAPHICS CONTEXT
+// SET UP THE CANVAS AND GRAPHICS CONTEXT
 let cnv = document.getElementById("canv");
 let ctx = cnv.getContext("2d");
 cnv.width = 800;
 cnv.height = 600;
+
+// STORE IMAGES IN VARIABLES 
+let gucciLogo = document.getElementById("gucci-logo");
 
 // LET'S DRAW SOMETHING USING THE GRAPHICS COMNTEX (CTX)
 // DRAW RECTANGLES
@@ -26,4 +29,41 @@ ctx.strokeStyle = "rgb(0, 20, 40)";
 ctx.strokeText("Save me", 300, 100);
 
 // DRAW LINES 
-ctx.beginPath()
+ctx.lineWidth = 2;
+ctx.strokeStyle = "blue";
+ctx.beginPath();
+ctx.moveTo(500, 200);
+ctx.lineTo(700, 150);
+ctx.lineTo(600, 100);
+ctx.stroke();
+
+// DRAW POLYGON
+ctx.lineWidth = 2;
+ctx.fillStyle = "cyan";
+ctx.beginPath();
+ctx.moveTo(500, 400);
+ctx.lineTo(700, 350);
+ctx.lineTo(600, 300);
+ctx.closePath();
+ctx.fill();
+
+// DRAW CIRCLES
+ctx.lineWidth = 2;
+ctx.strokeStyle = "black";
+ctx.beginPath();
+ctx.arc(100, 500, 50, 0, 2 * Math.PI);
+ctx.stroke();
+
+ctx.lineWidth = 2;
+ctx.fillStyle = "grey";
+ctx.beginPath();
+ctx.arc(250, 500, 30, 0, 2 * Math.PI);
+ctx.fill();
+
+ctx.fillStyle = "cyan";
+ctx.beginPath();
+ctx.arc(250, 500, 20, 0, 2 * Math.PI);
+ctx.fill();
+
+// DRAW IMAGES 
+ctx.drawImage(gucciLogo, 300, 400);
