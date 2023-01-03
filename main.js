@@ -19,12 +19,11 @@ ctx.fillRect(0, 400, 800, 200);
 ctx.lineWidth = 2;
 ctx.fillStyle = "red";
 ctx.beginPath();
-ctx.arc(400, 400, 50, 0, 2 * Math.PI);
+ctx.arc(400, 400, 50, Math.PI, 0);
 ctx.fill();
-ctx.arc()
 
 // CLOUD IMAGE 
-ctx.drawImage("cloudImg", 400, 200);
+ctx.drawImage(cloudImg, 400, 200);
 
 
 
