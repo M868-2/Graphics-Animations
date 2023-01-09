@@ -8,6 +8,9 @@ cnv.height = 600;
 // IMAGE VARIABLE
 let cloud = document.getElementById("cloud-img");
 
+// VARIABLES
+let mouseIsClicked = false;
+
 // BACKGROUNG COLOUR
 ctx.fillStyle = "Blue";
 ctx.fillRect(0, 0, 800, 400);
@@ -17,7 +20,7 @@ ctx.fillRect(0, 400, 800, 200);
 
 // DRAW HALF CIRCLE
 ctx.lineWidth = 2;
-ctx.fillStyle = "red";
+ctx.fillStyle = "rgb(" + circRed + " , 0, 0)";
 ctx.beginPath();
 ctx.arc(400, 400, 50, Math.PI, 0);
 ctx.fill();
@@ -25,6 +28,22 @@ ctx.fill();
 // CLOUD IMAGE
 ctx.drawImage(cloud, 350, 175);
 ctx.drawImage(cloud, 400, 150);
+
+requestAnimationFrame(loop);
+function loop() {
+  if (mouseIsPressed) {
+    cloud++;
+    CircRed -= 2;
+  }
+}
+
+// EVENTS
+document.addEventListener("mousedown" , mouseDownHandler);
+document.addEventListener("mouseup" , mouseUpHandler);
+
+function mouseDownHandler {
+
+}
 
 // DRAWING BASICS
 // STORE IMAGES IN VARIABLES
