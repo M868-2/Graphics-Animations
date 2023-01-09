@@ -6,9 +6,9 @@ cnv.width = 800;
 cnv.height = 600;
 
 // IMAGE VARIABLE
-let cloudImg = document.getElementById("cloud-img");
+let cloud = document.getElementById("cloud-img");
 
-// BACKGROUNG COLOUR 
+// BACKGROUNG COLOUR
 ctx.fillStyle = "Blue";
 ctx.fillRect(0, 0, 800, 400);
 
@@ -22,29 +22,12 @@ ctx.beginPath();
 ctx.arc(400, 400, 50, Math.PI, 0);
 ctx.fill();
 
-// CLOUD IMAGE 
-ctx.drawImage(cloudImg, 400, 200);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// CLOUD IMAGE
+ctx.drawImage(cloud, 350, 175);
+ctx.drawImage(cloud, 400, 150);
 
 // DRAWING BASICS
-// STORE IMAGES IN VARIABLES 
+// STORE IMAGES IN VARIABLES
 // let gucciLogo = document.getElementById("gucci-logo");
 
 // // LET'S DRAW SOMETHING USING THE GRAPHICS COMNTEX (CTX)
@@ -66,7 +49,7 @@ ctx.drawImage(cloudImg, 400, 200);
 // ctx.strokeStyle = "rgb(0, 20, 40)";
 // ctx.strokeText("Save me", 300, 100);
 
-// // DRAW LINES 
+// // DRAW LINES
 // ctx.lineWidth = 2;
 // ctx.strokeStyle = "blue";
 // ctx.beginPath();
@@ -103,5 +86,5 @@ ctx.drawImage(cloudImg, 400, 200);
 // ctx.arc(250, 500, 20, 0, 2 * Math.PI);
 // ctx.fill();
 
-// // DRAW IMAGES 
+// // DRAW IMAGES
 // ctx.drawImage(gucciLogo, 300, 400);
