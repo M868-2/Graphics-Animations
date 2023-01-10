@@ -38,12 +38,10 @@ function loop() {
 }
 
 // EVENTS
-document.addEventListener("mousedown" , mouseDownHandler);
-document.addEventListener("mouseup" , mouseUpHandler);
+document.addEventListener("mousedown", mouseDownHandler);
+document.addEventListener("mouseup", mouseUpHandler);
 
-function mouseDownHandler {
-
-}
+function mouseDownHandler() {}
 
 // DRAWING BASICS
 // STORE IMAGES IN VARIABLES
