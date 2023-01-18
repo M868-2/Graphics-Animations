@@ -9,7 +9,8 @@ cnv.height = 600;
 let cloud = document.getElementById("cloud-img");
 
 // VARIABLES
-let mouseIsClicked = false;
+let circRed = 255;
+// let mouseIsClicked = false;
 
 // BACKGROUNG COLOUR
 ctx.fillStyle = "Blue";
@@ -31,17 +32,27 @@ ctx.drawImage(cloud, 400, 150);
 
 requestAnimationFrame(loop);
 function loop() {
-  if (mouseIsPressed) {
-    cloud++;
-    CircRed -= 2;
-  }
+  cloud++;
+  circRed -= 2;
+
+  // BACKGROUNG COLOUR
+  ctx.fillStyle = "Blue";
+  ctx.fillRect(0, 0, 800, 400);
+
+  ctx.fillStyle = "Green";
+  ctx.fillRect(0, 400, 800, 200);
+
+  // if (mouseIsClicked) {
+  //   cloud++;
+  //   circRed -= 2;
+  // }
 }
 
 // EVENTS
-document.addEventListener("mousedown", mouseDownHandler);
-document.addEventListener("mouseup", mouseUpHandler);
+// document.addEventListener("mousedown", mouseDownHandler);
+// document.addEventListener("mouseup", mouseUpHandler);
 
-function mouseDownHandler() {}
+// function mouseDownHandler() {}
 
 // DRAWING BASICS
 // STORE IMAGES IN VARIABLES
