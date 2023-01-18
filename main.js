@@ -9,50 +9,40 @@ cnv.height = 600;
 let cloud = document.getElementById("cloud-img");
 
 // VARIABLES
+let circBlue = 0;
+let circRadius = 50;
 let circRed = 255;
-// let mouseIsClicked = false;
-
-// BACKGROUNG COLOUR
-ctx.fillStyle = "Blue";
-ctx.fillRect(0, 0, 800, 400);
-
-ctx.fillStyle = "Green";
-ctx.fillRect(0, 400, 800, 200);
-
-// DRAW HALF CIRCLE
-ctx.lineWidth = 2;
-ctx.fillStyle = "rgb(" + circRed + " , 0, 0)";
-ctx.beginPath();
-ctx.arc(400, 400, 50, Math.PI, 0);
-ctx.fill();
-
-// CLOUD IMAGE
-ctx.drawImage(cloud, 350, 175);
-ctx.drawImage(cloud, 400, 150);
+let cloud1 = 350;
+let cloud2 = 400;
 
 requestAnimationFrame(loop);
 function loop() {
-  cloud++;
-  circRed -= 2;
+  // UPDATED VARIABLES
+  circBlue++;
+  circRadius++;
+  cloud1++;
+  cloud2--;
 
-  // BACKGROUNG COLOUR
+  // BACKGROUND COLOUR
   ctx.fillStyle = "Blue";
   ctx.fillRect(0, 0, 800, 400);
 
   ctx.fillStyle = "Green";
   ctx.fillRect(0, 400, 800, 200);
 
-  // if (mouseIsClicked) {
-  //   cloud++;
-  //   circRed -= 2;
-  // }
+  // DRAW HALF CIRCLE
+  ctx.lineWidth = 2;
+  ctx.fillStyle = "rgb(" + circRed + ", " + circBlue + " , 0)";
+  ctx.beginPath();
+  ctx.arc(400, 400, circRadius, Math.PI, 0);
+  ctx.fill();
+
+  // CLOUD IMAGE
+  ctx.drawImage(cloud, cloud1, 175);
+  ctx.drawImage(cloud, cloud2, 150);
+
+  requestAnimationFrame(loop);
 }
-
-// EVENTS
-// document.addEventListener("mousedown", mouseDownHandler);
-// document.addEventListener("mouseup", mouseUpHandler);
-
-// function mouseDownHandler() {}
 
 // DRAWING BASICS
 // STORE IMAGES IN VARIABLES
